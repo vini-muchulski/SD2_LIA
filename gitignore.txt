@@ -1,0 +1,12 @@
+
+SD2-viola_jones/servo.ino
+SD2-viola_jones/testes/dlib_face_recognition_resnet_model_v1.dat
+SD2-viola_jones/testes/shape_predictor_68_face_landmarks.dat
+/SD2-viola_jones/docs
+SD2-viola_jones/docss/docs/sd2.7z
+SD2-viola_jones/docss/docs/sd2/sd2/1_4_cremalheira.stl
+SD2-viola_jones/docss/docs/sd2/sd2/Mecanismos_olhos_2d.bmp
+SD2-viola_jones/docss/docs/sd2/sd2/meia_cremalheira.stl
+SD2-viola_jones/docss/docs/sd2/sd2/meia_engrenagem.stl
+SD2-viola_jones/docss/docs/sd2/sd2/olhos.stl
+SD2-viola_jones/docss/docs/sd2/sd2/plataforma_X.stl
