@@ -63,6 +63,8 @@ else:
             row = min(row, 3)
 
             print(f"Rosto localizado na célula da matriz: linha {row}, coluna {col}")
+            text = f"Linha {row}, Coluna {col}"
+            cv.putText(frame, text, (20, height -20), cv.FONT_HERSHEY_SIMPLEX, 1.5, (0, 0, 255), 2)
 
         # Desenhar as linhas da grade na imagem
         for i in range(1, 3):
