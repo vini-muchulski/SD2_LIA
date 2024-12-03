@@ -9,7 +9,7 @@ face_detector = cv.FaceDetectorYN.create(
 )
 
 video_path = "sora.mp4"
-cap = cv.VideoCapture(video_path)
+cap = cv.VideoCapture(0)
 
 def get_position(row, col):
     switch = {
