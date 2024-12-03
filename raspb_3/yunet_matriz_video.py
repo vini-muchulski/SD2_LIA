@@ -11,6 +11,20 @@ face_detector = cv.FaceDetectorYN.create(
 video_path = "sora.mp4"
 cap = cv.VideoCapture(video_path)
 
+def get_position(row, col):
+    switch = {
+        (1, 1): "position(top_left)",
+        (1, 2): "position(top_center)",
+        (1, 3): "position(top_right)",
+        (2, 1): "position(middle_left)",
+        (2, 2): "position(middle_center)",
+        (2, 3): "position(middle_right)",
+        (3, 1): "position(bottom_left)",
+        (3, 2): "position(bottom_center)",
+        (3, 3): "position(bottom_right)"
+    }
+    return switch.get((row, col), "position(unknown)")
+
 if not cap.isOpened():
     print(f"Erro ao abrir o vídeo {video_path}")
 else:
@@ -43,8 +57,9 @@ else:
                 col = min(col, 3)
                 row = min(row, 3)
 
-                print(f"Rosto localizado na célula da matriz: linha {row}, coluna {col}")
-                text = f"Linha {row}, Coluna {col}"
+                position = get_position(row, col)
+                print(f"Rosto localizado na célula da matriz: {position}")
+                text = position
                 cv.putText(frame, text, (20, height -20), cv.FONT_HERSHEY_SIMPLEX, 1.5, (0, 0, 255), 2)
 
             for i in range(1, 3):
