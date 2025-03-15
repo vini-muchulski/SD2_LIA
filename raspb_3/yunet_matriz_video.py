@@ -1,5 +1,6 @@
 import cv2 as cv
 
+
 model = 'face_detection_yunet_2023mar.onnx'
 input_size = (640, 640)
 
@@ -8,8 +9,11 @@ face_detector = cv.FaceDetectorYN.create(
     top_k=5000, backend_id=cv.dnn.DNN_BACKEND_OPENCV, target_id=cv.dnn.DNN_TARGET_CPU
 )
 
+ip = 'http://192.168.0.126'
+stream_url = f"{ip}:81/stream"
+
 video_path = "sora.mp4"
-cap = cv.VideoCapture(0)
+cap = cv.VideoCapture(stream_url)
 
 def get_position(row, col):
     switch = {

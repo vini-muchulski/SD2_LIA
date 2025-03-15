@@ -1,7 +1,7 @@
 import cv2 as cv
 
 # URL do stream da câmera
-ip = 'http://192.168.0.107'
+ip = 'http://192.168.0.126'
 stream_url = f"{ip}:81/stream"
      
 cap = cv.VideoCapture(stream_url)
